@@ -1,41 +1,13 @@
-<span><img src="./images/download.jpeg"  class="Addpage"></span> 
-<div><img src="./images/closeup1.png"  class="Closeup-Logo"></div> 
-<div class="border"  ng-controller="HomeController">
-<form ng-submit="addImg(img)" class="formPosition">
-<label class="label">Title</label>
+<h1 class="title">Close Up</h1>
+
+<form name="new-img" ng-submit="addImg(img)" class="formPosition">
   <p class="control">
-     <input class="input1"  type="text" placeholder=" Title"
-           ng-model="img.name" ng-keyup="validateName(img.name)"/> {{ errors.name }}
+    <input name="name" type="text" placeholder="Name"
+           ng-model="img.title" />
   </p>
-   <label class="label">Link</label>
-  <p class="control2">
-    <input class="input2" type="text" placeholder=" http://closeup.img"
-           ng-model="img.email" ng-keyup="validateEmail(img.email)"/> {{ errors.email}}
+  <p class="control">
+    <input name="url" type="text" placeholder="http://closeup.img"
+           ng-model="img.url" class=/>
   </p>
-   <button class="buttonis-primary">Add</button>
-  </form>
-  
-
-<!-- 
-  <div class='name'>
-       <div cliass= "Messages"> 
-           <li ng-repeat= "img in imgs">
-             <div class="styla">Name:<span>{{img.name}}<span></div>
-             <!-- <div class="styla">Email<span>{{message.email}}</span></div>
-             </li>
-        </div>
-   </div> --> -->
-  
-
-  <div id="slideshow">
-   <div>
-  
-
-     <img src="./images/closeup2.png " class="close" >
-   </div>
- 
-   
-</div>
-
-
-
+  <button class="button is-primary">Add</button>
+</form>

@@ -1,5 +1,5 @@
 
-<div class="detailCard border">
+<div class="detailCard">
 
   <div class="detailTitle">{{ img.title }}</div>
 
@@ -11,5 +11,27 @@
   </div>
 
   <div class="count">Love it {{ img.count }}x{{ times }}! </div>
+
+  <form ng-submit="addComment(comments)" class="commentForm">
+    <label class="label">Comments</label>
+        <p class="control">
+          <textarea class="textarea"
+                placeholder="Add a comment!"
+                ng-model="comments.comment">
+          </textarea>
+        </p>
+       <p class="control">
+          <button class="button is-secondary">Submit</button>
+       </p>
+   </form>
+<div class="commentShow">
+  <ul>
+    <li ng-repeat="showComment in showComments">
+      <div class="box">
+        <p>{{showComment.comments}}</p>
+      </div>
+    </li>
+  </ul>
+</div>
 
 </div>
